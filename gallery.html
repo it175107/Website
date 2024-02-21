@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+    
+    <style>
+  body{
+   background-image: url("pictures/computer.png");
+   background-repeat: no-repeat;
+   background-size: cover ;
+   background-position: center; 
+   height: 100%;
+  }
+    </style>
+  </head>
+<body>
+
+<strong><div id="datetime" style="position: fixed; right: 14px; top: 10px; font-size: 24px; "></div></strong>
+<script>
+    function updateDateTime() {
+        var now = new Date();
+        var date = now.toLocaleDateString();
+        var options = { hour12: false };
+        var time = now.toLocaleTimeString(undefined, options);
+        var dateTimeString = date + ' ' + time;
+
+        document.getElementById('datetime').innerHTML = dateTimeString;
+    }
+    updateDateTime();
+
+    setInterval(updateDateTime, 1000);
+</script>
+
+      <img  class="logo" src="pictures/logo.png" >
+      <img class="profile" src="pictures/profile.jpg">
+      <h1 class="h1">AMPRAZIS NIKOLAOS</h1>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="gallery.html">Photo gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+      <div class="sidebar">
+      <div class="sidebar-link">
+        <a href="https://www.linkedin.com/in/nikos-amprazis-949815175" target="_blank">
+        <img src="pictures/linkedIn.png" alt="LinkedIn">
+        <div>LinkedIn</div>
+        </a>
+      </div>
+      <div class="sidebar-link">
+        <a href="https://www.iee.ihu.gr/" target="blank">
+          <img src="pictures/ihu.jpg" alt="IHU">
+        <div>IHU</div>
+        </a>
+      </div>
+    </div>
+
+ <div class="container">
+      <div class="gallery">
+        <a href="pictures/image1.jpg" data-lightbox="topia" data-title="Caption1">
+          <img src="pictures/image1.jpg">
+        </a>
+         <a href="pictures/image2.png" data-lightbox="topia" data-title="Caption2">
+          <img src="pictures/image2.png">
+        </a>
+        <a href="pictures/image3.jpg" data-lightbox="topia" data-title="Caption3">
+          <img src="pictures/image3.jpg">
+        </a>
+         <a href="pictures/image4.png" data-lightbox="topia" data-title="Caption4">
+          <img src="pictures/image4.png">
+        </a>
+         <a href="pictures/image5.jpg" data-lightbox="topia" data-title="Caption5">
+          <img src="pictures/image5.jpg">
+        </a>
+         <a href="pictures/image6.jpg" data-lightbox="topia" data-title="Caption6">
+          <img src="pictures/image6.jpg">
+        </a>
+         <a href="pictures/image7.png" data-lightbox="topia" data-title="Caption7">
+          <img src="pictures/image7.png">
+        </a>
+         <a href="pictures/image8.jpg" data-lightbox="topia" data-title="Caption8">
+          <img src="pictures/image8.jpg">
+        </a>
+
+      </div>
+    </div>
+<script src="lightbox-plus-jquery.js"></script>
+	<div class="copy">
+	<p><strong>&copy;Copyright 2023 Nikos Amprazis</strong></p>
+	</div>
+  </body>
+</html>

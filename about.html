@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="style.css">
+
+ <style>
+
+  body{
+   background-image: url("pictures/computer.png");
+   background-repeat: no-repeat;
+   background-size: cover ;
+   background-position: center;
+   margin: 0;
+   height: 100vh;
+}
+ </style>
+  </head>
+<body>
+
+<strong><div id="datetime" style="position: fixed; right: 14px; top: 10px; font-size: 24px; "></div></strong>
+<script>
+    function updateDateTime() {
+        var now = new Date();
+        var date = now.toLocaleDateString();
+        var options = { hour12: false };
+        var time = now.toLocaleTimeString(undefined, options);
+        var dateTimeString = date + ' ' + time;
+
+        document.getElementById('datetime').innerHTML = dateTimeString;
+    }
+    updateDateTime();
+
+    setInterval(updateDateTime, 1000);
+</script>
+
+      <img  class="logo" src="pictures/logo.png" >
+      <img class="profile" src="pictures/profile.jpg">
+      <h1 class="h1">AMPRAZIS NIKOLAOS</h1>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="gallery.html">Photo gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+      <div class="sidebar-link">
+        <a href="https://www.linkedin.com/in/nikos-amprazis-949815175" target="_blank">
+        <img src="pictures/linkedIn.png" alt="LinkedIn">
+        <div>LinkedIn</div>
+        </a>
+      </div>
+      <div class="sidebar-link">
+        <a href="https://www.iee.ihu.gr/" target="blank">
+          <img src="pictures/ihu.jpg" alt="IHU">
+        <div>IHU</div>
+        </a>
+      </div>
+    </div>
+
+  <div style="
+  display: flex; 
+  flex-direction: row;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+  text-align: center;">
+
+  <div style="flex: 1;  ">
+    <p class="about"><strong>ABOYT ME.</p>
+    <div class="paragraph"> I am 25 years old and I am studying at the department of Computer Engineering and Electronic Systems<br>
+      I have been living in Thessaloniki because I am a student in the Department of Computer Engineering.<br>
+      I graduated from high school with a GPA of "17" from Axos High School.<br>
+      Also,I have attended some online seminars by "Grow with Google".</strong></div>
+  </div>
+</div>
+
+	<div class="copy">
+	<p><strong>&copy;Copyright 2023 Nikolaos Amprazis</strong></p>
+	</div>
+</body>
+</html>
